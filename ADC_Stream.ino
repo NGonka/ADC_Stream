@@ -1,7 +1,14 @@
 /*
 #### change log####
+version 1.0.5
++own analog read function
+
+version 1.0.4
+.changed: readVcc just once before the other ADC reads start -> saves some conversion time
+
+
 version 1.0.3
-.changed ADC Prescaler to 64 (=>250kHz ADC Clock)
+.changed ADC Prescaler to 64 (=>250kHz ADC Clock) -> ,ore stable readings
 .commented out unused stuff and commands
 
 version 1.0.2
@@ -25,7 +32,7 @@ code freeze from development
 using namespace ArduinoJson::Generator;
 */
 boolean DEBUG=false;
-String version ="1.0.3";
+String version ="1.0.5";
 
 //
 #define FASTADC 1
@@ -89,7 +96,46 @@ long readVcc() {
 	return result;
 }
 
-int toVolt(int reading)
+int adcReadA0()
+{
+	int result;
+	ADMUX = (1<<REFS0) ;
+	//ADCSRA = (1<<ADEN) | (1<<ADSC);
+	ADCSRA |= (1<<ADEN) |(1<<ADSC);
+	delayMicroseconds(1500);
+	while(bit_is_set(ADCSRA,ADSC));
+	result = ADCL;
+	result |=ADCH<<8;
+	//ADCSRA |= (0<<ADEN)
+	return result;
+}
+
+int adcReadA1()
+{
+	int result;
+	ADMUX = (1<<REFS0) | (1 << MUX0);; 
+	ADCSRA |= (1<<ADEN) | (1<<ADSC);
+	delayMicroseconds(1500);
+	while(bit_is_set(ADCSRA,ADSC));
+	result =ADCL;
+	result |=ADCH<<8;
+	return result;
+}
+
+int adcReadA2()
+{
+	int result;
+	ADMUX = (1<<REFS0) | (1 << MUX1);
+	ADCSRA |= (1<<ADEN) | (1<<ADSC);
+	delayMicroseconds(1500);
+	while(bit_is_set(ADCSRA,ADSC));
+	result =ADCL;
+	result |=ADCH<<8;
+	return result;
+}
+
+
+long toVolt(int reading, long Vcc)
 {
 	//! Converts the ADC reading to Voltage.
 	//! Consider the actual Supply voltage and the Voltage divider factor of 5
@@ -99,11 +145,11 @@ int toVolt(int reading)
 		Serial.print("V_raw: ");
 		Serial.println(reading);
 	}
-	return readVcc()*reading*5/1024;
+	return long(Vcc*reading*5/1024);
 	
 }
 
-long toCurrent(int reading)
+long toCurrent(int reading, long Vcc)
 {
 	//! Converts the ADC reading to Current.
 	//! Consider the actual Supply voltage
@@ -113,17 +159,17 @@ long toCurrent(int reading)
 	Serial.print("I_raw: ");
 	Serial.println(reading);
 	}
-	return long(readVcc()*reading/1024);
+	return long(Vcc*reading/1024);
 	
 }
 
-long toRPM(int reading)
+long toRPM(int reading, long Vcc)
 {
 	//! Converts the ADC reading to RPM.
 	//! Consider the actual Supply voltage and the Voltage divider factor of 5
 	///return returns rpm
 	
-	long Voltage=readVcc()*reading*5/1024; //! Voltage in milliVolts
+	long Voltage=Vcc*reading*5/1024; //! Voltage in milliVolts
 	if (DEBUG)
 	{
 		
@@ -271,11 +317,18 @@ void loop()
 		currTime2 = micros();
 		//! Main Serial.
 		//! Reads the first three Analog Inputs and converts them into their corresponding Unit
-		readA0=toVolt(analogRead(A0));
+        //long VCC = readVcc();
+		//readA0=toVolt(analogRead(A0),VCC);
+		////delay(2);
+		//readA1=toCurrent(analogRead(A1),VCC);
+		////delay(2);
+		//readA2=toRPM(analogRead(A2),VCC);
+		long VCC = readVcc();
+		readA0=toVolt(adcReadA0(),VCC);
 		//delay(2);
-		readA1=toCurrent(analogRead(A1));
+		readA1=toCurrent(adcReadA1(),VCC);
 		//delay(2);
-		readA2=toRPM(analogRead(A2));
+		readA2=toRPM(adcReadA2(),VCC);
 		//delay(2);
 		Power =readA0*readA1/1000; //>in milliWatt
 		//currTime = currTime2;

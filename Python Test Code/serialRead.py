@@ -67,12 +67,13 @@ with open ('Data.csv','w', newline='') as csvfile:
         message = readlineCR(ser)
         # print('Message: {0}'.format(message))
         # print('count open: {0} count close: {1}'.format(message.count('{'),message.count('}')))
-        if message.count('{')==1 & message.count('}')==1:
+        if message.count('{')==1 & message.count('}')==1 :
             try:
                 text= json.loads(message)
                 if validate_json(text):
                     timestamp=int(text['timestamp'])
-                    writer.writerow(text)
+                    if timestamp>0:             #2*60*1000000:
+                        writer.writerow(text)
                 else:
                     message=''
                     # timestamp=0
@@ -90,7 +91,7 @@ with open ('Data.csv','w', newline='') as csvfile:
             # timestamp=0
             ser.flushOutput()
         
-        if timestamp>2*60*1000000:
+        if timestamp>4*60*1000000:
             sys.exit()
 
         

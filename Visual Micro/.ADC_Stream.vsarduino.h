@@ -17,9 +17,12 @@
 extern "C" void __cxa_pure_virtual() {;}
 
 long readVcc();
-int toVolt(int reading);
-long toCurrent(int reading);
-long toRPM(int reading);
+int adcReadA0();
+int adcReadA1();
+int adcReadA2();
+long toVolt(int reading, long Vcc);
+long toCurrent(int reading, long Vcc);
+long toRPM(int reading, long Vcc);
 //
 //
 
