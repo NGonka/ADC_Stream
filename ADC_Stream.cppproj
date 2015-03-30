@@ -71,6 +71,8 @@
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter/utility</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter</Value>
       <Value>../../ADC_Stream</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino</Value>
@@ -104,6 +106,8 @@
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter/utility</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter</Value>
       <Value>../../ADC_Stream</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino</Value>
@@ -117,7 +121,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard;../../ADC_Stream;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard;../../ADC_Stream;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter/utility;</VMSETTING_IncludePaths>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
@@ -150,6 +154,8 @@
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter/utility</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter</Value>
       <Value>../../ADC_Stream</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino</Value>
@@ -183,6 +189,8 @@
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter/utility</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter</Value>
       <Value>../../ADC_Stream</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino</Value>
@@ -196,7 +204,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard;../../ADC_Stream;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard;../../ADC_Stream;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries/eRCaGuy_Timer2_Counter/utility;</VMSETTING_IncludePaths>
   </PropertyGroup>
   <ItemGroup>
     <None Include="ADC_Stream.ino">

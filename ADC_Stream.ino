@@ -1,5 +1,8 @@
 /*
 #### change log####
+version 1.0.6b
++try a better Timestamp counter ( 1us counter precision)
+
 version 1.0.6
 .changed datastrings to strings with constant length
 
@@ -34,8 +37,11 @@ code freeze from development
 
 using namespace ArduinoJson::Generator;
 */
+#include <eRCaGuy_Timer2_Counter.h>
+
+
 boolean DEBUG=false;
-String version ="1.0.6";
+String version ="1.0.6b";
 
 //
 #define FASTADC 1
@@ -220,6 +226,9 @@ void setup()
 	sbi(ADCSRA,ADPS1);
 	cbi(ADCSRA,ADPS0);
 	#endif
+	
+	//! set up the timer
+	timer2.setup();
 
 	//! Initialize Serial Communication
 	Serial.begin(buad);
@@ -342,7 +351,8 @@ void loop()
 
 	else if (msg.equals("AA"))
 	{
-		currTime2 = micros();
+		//currTime2 = micros();
+		currTime2 = timer2.get_count()/2;
 		//! Main Serial.
 		//! Reads the first three Analog Inputs and converts them into their corresponding Unit
         //long VCC = readVcc();
