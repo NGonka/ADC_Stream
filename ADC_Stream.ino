@@ -1,5 +1,8 @@
 /*
 #### change log####
+version 1.0.6a
+.added no JSON data transfer for Transferspeed testing
+
 version 1.0.6
 .changed datastrings to strings with constant length
 
@@ -35,7 +38,8 @@ code freeze from development
 using namespace ArduinoJson::Generator;
 */
 boolean DEBUG=false;
-String version ="1.0.6";
+boolean DEBUG_DATA=false;
+String version ="1.0.6a";
 
 //
 #define FASTADC 1
@@ -264,6 +268,24 @@ void loop()
 		}
 		
 	}
+    
+    if (msg.equals("DA"))
+	{
+		
+		DEBUG_DATA=!DEBUG_DATA;		
+		msg= "AA";
+		// if (DEBUG)
+		// {
+			// Serial.println("Debug: On");
+			
+		// }
+		// else
+		// {
+			// Serial.println("Debug: Off");
+			
+		// }
+		
+	}
 	//
 	//else if (msg.equals("A0"))
 	//{
@@ -380,7 +402,20 @@ void loop()
 			Serial.print("t: ");
 			Serial.println(currTime2);
 		}
-		else
+		else if (DEBUG_DATA)
+        {
+            
+			Serial.print(constTimeStringLengthOf5(readA0));
+			Serial.print(",");
+			Serial.print(constTimeStringLengthOf4(readA1));
+			Serial.print(",");
+			Serial.print(constTimeStringLengthOf4(readA2));
+			Serial.print(",");
+			Serial.print(constTimeStringLengthOf4(Power));
+			Serial.print(",");
+			Serial.println(constTimeStringLengthOf10(currTime2));
+        }
+        else
 		{
 		/*
 		JsonObject<5> dataItem;
@@ -426,6 +461,8 @@ void loop()
 		Serial.println("     Output is in JSON Style!!!");
 		//Serial.println("Ax : prints only Analog Pin x (bit value (x: 0-5))");
 		Serial.println("DD : toggle debug mode on and off");
+		Serial.println("DA : toggle debug_data mode on and off (No JSON output; just comma separated data");
+		Serial.println("EOH");
 		msg="";
 		
 		
