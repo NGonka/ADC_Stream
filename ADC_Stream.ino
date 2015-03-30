@@ -1,5 +1,8 @@
 /*
 #### change log####
+version 1.0.6
+.changed datastrings to strings with constant length
+
 version 1.0.5
 +own analog read function
 
@@ -32,7 +35,7 @@ code freeze from development
 using namespace ArduinoJson::Generator;
 */
 boolean DEBUG=false;
-String version ="1.0.5";
+String version ="1.0.6";
 
 //
 #define FASTADC 1
@@ -183,6 +186,31 @@ long toRPM(int reading, long Vcc)
 	return rpm;
 }
 
+
+
+String constTimeStringLengthOf10(unsigned long timestamp)
+{
+	char charBuffer[11+1];
+	
+	sprintf(charBuffer,"%10lu",timestamp);
+	return String(charBuffer);
+}
+
+String constTimeStringLengthOf5(long value)
+{
+	char charBuffer[6+1];
+	
+	sprintf(charBuffer,"%5ld",value);
+	return String(charBuffer);
+}
+
+String constTimeStringLengthOf4(long value)
+{
+	char charBuffer[5+1];
+	
+	sprintf(charBuffer,"%4ld",value);
+	return String(charBuffer);
+}
 
 void setup()
 {
@@ -368,19 +396,19 @@ void loop()
                 
                 Serial.println("{");
                 Serial.print("\t\"voltage\": ");
-                Serial.print(readA0);
+                Serial.print(constTimeStringLengthOf5(readA0));
                 Serial.println(",");
                 Serial.print("\t\"current\": ");
-                Serial.print(readA1);
+                Serial.print(constTimeStringLengthOf4(readA1));
                 Serial.println(",");
                 Serial.print("\t\"rpm\": ");
-                Serial.print(readA2);
+                Serial.print(constTimeStringLengthOf4(readA2));
                 Serial.println(",");
                 Serial.print("\t\"power\": ");
-                Serial.print(Power);
+                Serial.print(constTimeStringLengthOf4(Power));
                 Serial.println(",");
                 Serial.print("\t\"timestamp\": ");
-                Serial.println(currTime2);
+                Serial.println(constTimeStringLengthOf10(currTime2));
                 Serial.println("}");
                 Serial.println("EOL");
 

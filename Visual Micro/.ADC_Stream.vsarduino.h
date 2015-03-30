@@ -23,6 +23,9 @@ int adcReadA2();
 long toVolt(int reading, long Vcc);
 long toCurrent(int reading, long Vcc);
 long toRPM(int reading, long Vcc);
+String constTimeStringLengthOf10(unsigned long timestamp);
+String constTimeStringLengthOf5(long value);
+String constTimeStringLengthOf4(long value);
 //
 //
 

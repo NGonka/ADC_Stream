@@ -72,6 +72,7 @@ with open ('Data.csv','w', newline='') as csvfile:
                 text= json.loads(message)
                 if validate_json(text):
                     timestamp=int(text['timestamp'])
+                    # print(text['timestamp'])
                     if timestamp>0:             #2*60*1000000:
                         writer.writerow(text)
                 else:
@@ -92,6 +93,7 @@ with open ('Data.csv','w', newline='') as csvfile:
             ser.flushOutput()
         
         if timestamp>4*60*1000000:
+            ser.write(b'S')
             sys.exit()
 
         
