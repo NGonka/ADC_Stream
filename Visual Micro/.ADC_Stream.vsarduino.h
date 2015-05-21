@@ -10,7 +10,7 @@
 
 #define __AVR_ATmega328p__
 #define __AVR_ATmega328P__
-#define ARDUINO 105
+#define ARDUINO 163
 #define ARDUINO_MAIN
 #define F_CPU 16000000L
 #define __AVR__
@@ -24,11 +24,15 @@ long toVolt(int reading, long Vcc);
 long toCurrent(int reading, long Vcc);
 long toRPM(int reading, long Vcc);
 String constTimeStringLengthOf10(unsigned long timestamp);
-String constTimeStringLengthOf5(long value);
-String constTimeStringLengthOf4(long value);
+String constRPMStringLengthOf7(long value);
+String constVoltStringLengthOf5(long value);
+String constCurrStringLengthOf4(long value);
+long enc_rpm();
+void enableCounter();
+void disableCounter();
 //
 //
 
-#include "C:\Program Files (x86)\Arduino\hardware\arduino\variants\standard\pins_arduino.h" 
-#include "C:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino\arduino.h"
+#include "O:\Downloads\arduino-1.6.3\hardware\arduino\avr\variants\standard\pins_arduino.h" 
+#include "O:\Downloads\arduino-1.6.3\hardware\arduino\avr\cores\arduino\arduino.h"
 #include <ADC_Stream.ino>

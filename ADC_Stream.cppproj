@@ -54,7 +54,7 @@
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=105</Value>
+      <Value>ARDUINO=163</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -63,17 +63,17 @@
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
       <Value></Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/install/ownCloud/Eigenes/Arduino/libraries</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/libraries</Value>
+      <Value>O:/Downloads/arduino-1.6.3/libraries</Value>
       <Value>../../ADC_Stream</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/variants/standard</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -87,7 +87,7 @@
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=105</Value>
+      <Value>ARDUINO=163</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -96,17 +96,17 @@
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
       <Value></Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/install/ownCloud/Eigenes/Arduino/libraries</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/libraries</Value>
+      <Value>O:/Downloads/arduino-1.6.3/libraries</Value>
       <Value>../../ADC_Stream</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/variants/standard</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
@@ -117,7 +117,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard;../../ADC_Stream;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/install/ownCloud/Eigenes/Arduino/libraries;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard;../../ADC_Stream;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/install/ownCloud/Eigenes/Arduino/libraries;O:/Downloads/arduino-1.6.3/hardware/arduino/avr/cores/arduino;O:/Downloads/arduino-1.6.3/hardware/arduino/avr/variants/standard;O:/Downloads/arduino-1.6.3/libraries;O:/Downloads/arduino-1.6.3/hardware/arduino/avr/libraries;o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/;o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/avr/;o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/;o:/downloads/arduino-1.6.3/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;</VMSETTING_IncludePaths>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
@@ -133,7 +133,7 @@
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=105</Value>
+      <Value>ARDUINO=163</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -142,17 +142,17 @@
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
       <Value></Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/install/ownCloud/Eigenes/Arduino/libraries</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/libraries</Value>
+      <Value>O:/Downloads/arduino-1.6.3/libraries</Value>
       <Value>../../ADC_Stream</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/variants/standard</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -166,7 +166,7 @@
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=105</Value>
+      <Value>ARDUINO=163</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -175,17 +175,17 @@
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
       <Value></Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/program files (x86)/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/install/ownCloud/Eigenes/Arduino/libraries</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/</Value>
+      <Value>O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/libraries</Value>
+      <Value>O:/Downloads/arduino-1.6.3/libraries</Value>
       <Value>../../ADC_Stream</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard</Value>
-      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/variants/standard</Value>
+      <Value>O:/Downloads/arduino-1.6.3/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
@@ -196,7 +196,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard;../../ADC_Stream;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/install/ownCloud/Eigenes/Arduino/libraries;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/variants/standard;../../ADC_Stream;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;O:/Eigene Dokumente/Windlabor/Eigenes/Arduino/libraries;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/;c:/program files (x86)/arduino/hardware/tools/avr/avr/include/avr/;c:/program files (x86)/arduino/hardware/tools/avr/avr/;c:/program files (x86)/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/install/ownCloud/Eigenes/Arduino/libraries;O:/Downloads/arduino-1.6.3/hardware/arduino/avr/cores/arduino;O:/Downloads/arduino-1.6.3/hardware/arduino/avr/variants/standard;O:/Downloads/arduino-1.6.3/libraries;O:/Downloads/arduino-1.6.3/hardware/arduino/avr/libraries;o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/;o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/include/avr/;o:/downloads/arduino-1.6.3/hardware/tools/avr/avr/;o:/downloads/arduino-1.6.3/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;</VMSETTING_IncludePaths>
   </PropertyGroup>
   <ItemGroup>
     <None Include="ADC_Stream.ino">

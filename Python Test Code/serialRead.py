@@ -5,7 +5,7 @@ import serial,json,time,csv,sys
 
 
 
-ser = serial.Serial('COM11',115200)
+ser = serial.Serial('COM4',115200)
 
 message=''
 
@@ -49,63 +49,64 @@ def readlineCR(port):
 
 def validate_json(text):
     try:
-        if text.__contains__('timestamp') & text.__contains__('rpm') &text.__contains__('power') &text.__contains__('voltage') &text.__contains__('current'):
+        if text.__contains__('tim') & text.__contains__('rpm') &text.__contains__('vol') &text.__contains__('cur'):
             return True
     except:
         return False
 with open ('Data.csv','w', newline='') as csvfile:
-	print(time.strftime('%X %x'))
-	fieldnames=['voltage','current','power','rpm','timestamp']
-	writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-	writer.writeheader()
-	while ser.isOpen():
-		# print(timestamp)
-		# print(ser.isOpen())
-		
-		# if ser.readline() is not 'EOL':
-			# message+=str(ser.readline())
-			# print(message)
-		message = readlineCR(ser)
-		# print('Message: {0}'.format(message))
-		# print('count open: {0} count close: {1}'.format(message.count('{'),message.count('}')))
-		if message.count('{')==1 & message.count('}')==1 :
-			try:
-				text= json.loads(message)
-				if validate_json(text):
-					timestamp=int(text['timestamp'])
-					# print(text['timestamp'])
-					if timestamp>0:             #2*60*1000000:
-						writer.writerow(text)
-				else:
-					message=''
-					# timestamp=0
-					ser.flushOutput()
-			except ValueError as err:
-				print('JSON Error')
-				print (err)
-				print('Faulty Message: {0}'.format(message))
-				message=''
-				# timestamp=0
-				ser.flushOutput()
-				pass
-		else:
-			message=''
-			# timestamp=0
-			ser.flushOutput()
-		
-		if timestamp>4*60*1000000:
-			print(time.strftime('%X %x'))
-			ser.write(b'S')
-			sys.exit()
+    print(time.strftime('%X %x'))
+    fieldnames=['vol','cur','rpm','tim']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames,dialect='excel-tab')
+    writer.writeheader()
+    while ser.isOpen():
+        # print(timestamp)
+        # print(ser.isOpen())
+        
+        # if ser.readline() is not 'EOL':
+            # message+=str(ser.readline())
+            # print(message)
+        message = readlineCR(ser)
+        # print('Message: {0}'.format(message))
+        # print('count open: {0} count close: {1}'.format(message.count('{'),message.count('}')))
+        # print(message)
+        if message.count('{')==1 & message.count('}')==1 :
+            try:
+                text= json.loads(message)
+                if validate_json(text):
+                    timestamp=int(text['tim'])
+                    # print(text['timestamp'])
+                    if timestamp>0:             #2*60*1000000:
+                        writer.writerow(text)
+                else:
+                    message=''
+                    # timestamp=0
+                    ser.flushOutput()
+            except ValueError as err:
+                print('JSON Error')
+                print (err)
+                print('Faulty Message: {0}'.format(message))
+                message=''
+                # timestamp=0
+                ser.flushOutput()
+                pass
+        else:
+            message=''
+            # timestamp=0
+            ser.flushOutput()
+        
+        if timestamp>5*60*1000000:# 1 minutes
+            print(time.strftime('%X %x'))
+            ser.write(b'S')
+            sys.exit()
 
-		
-		
-		# diff=(timestamp-timestamp_last)
-		# diff_diff=abs(diff-diff_last)
-		# freq=1/(diff/1000000)
-		# print(round(freq,2))
+        
+        
+        # diff=(timestamp-timestamp_last)
+        # diff_diff=abs(diff-diff_last)
+        # freq=1/(diff/1000000)
+        # print(round(freq,2))
 
-		# print(diff)
-		# timestamp_last=timestamp
-		# diff_last=diff
+        # print(diff)
+        # timestamp_last=timestamp
+        # diff_last=diff
 
