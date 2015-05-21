@@ -19,6 +19,4 @@
 #language setting
 *.rb linguist-language=c_cpp
 
-Debug/* linguist-vendored
-"Visual Micro/*" linguist-vendored
-jquery.js linguist-vendored=false
+
