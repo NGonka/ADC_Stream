@@ -5,7 +5,7 @@ import serial,json,time,csv,sys
 
 
 
-ser = serial.Serial('COM4',115200)
+ser = serial.Serial('COM11',115200)
 
 message=''
 
@@ -13,6 +13,8 @@ time.sleep(2.0)
 timestamp_last=0
 timestamp=0
 diff_last=0
+timestamp_start=0;
+
 ser.write(b'AA')
 
 def readlineCR(port):
@@ -49,13 +51,13 @@ def readlineCR(port):
 
 def validate_json(text):
     try:
-        if text.__contains__('tim') & text.__contains__('rpm') &text.__contains__('vol') &text.__contains__('cur'):
+        if text.__contains__('timestamp') & text.__contains__('rpm') &text.__contains__('voltage')&text.__contains__('power') &text.__contains__('current'):
             return True
     except:
         return False
 with open ('Data.csv','w', newline='') as csvfile:
     print(time.strftime('%X %x'))
-    fieldnames=['vol','cur','rpm','tim']
+    fieldnames=['voltage','current','power','rpm','timestamp']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames,dialect='excel-tab')
     writer.writeheader()
     while ser.isOpen():
@@ -72,8 +74,13 @@ with open ('Data.csv','w', newline='') as csvfile:
         if message.count('{')==1 & message.count('}')==1 :
             try:
                 text= json.loads(message)
+                # print(text)
                 if validate_json(text):
-                    timestamp=int(text['tim'])
+                    if timestamp==0:
+                        timestamp=int(text['timestamp'])
+                        timestamp_start=timestamp
+                    else:
+                        timestamp=int(text['timestamp'])
                     # print(text['timestamp'])
                     if timestamp>0:             #2*60*1000000:
                         writer.writerow(text)
@@ -94,7 +101,7 @@ with open ('Data.csv','w', newline='') as csvfile:
             # timestamp=0
             ser.flushOutput()
         
-        if timestamp>5*60*1000000:# 1 minutes
+        if (timestamp-timestamp_start)>2*60*1000000:# 1 minutes
             print(time.strftime('%X %x'))
             ser.write(b'S')
             sys.exit()

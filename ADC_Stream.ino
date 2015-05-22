@@ -73,7 +73,7 @@ String msg = "HH";
 //Variables for time reading
 volatile unsigned long lastTime = 0;
 volatile unsigned long currTime= 0;
-//long Power =0;
+long Power =0;
 volatile unsigned long currTime1 = 0;
 volatile unsigned long currTime2 = 0;
 volatile unsigned long meassureTime = 0;
@@ -466,7 +466,7 @@ void loop()
 		
 		
 		//delay(2);
-		//Power =readA0*readA1/1000;		//>in milliWatt
+		Power =readA0*readA1/1000;		//>in milliWatt
 		//currTime = currTime2;
 		//! Start Time measurement for measuring the loop length
 		
@@ -476,19 +476,19 @@ void loop()
 			
 			//JSON Output
 			Serial.println("{");
-				Serial.print("\t\"vol\": ");
+				Serial.print("\t\"voltage\": ");
 				Serial.print(constVoltStringLengthOf5(readA0));
 				Serial.println(",");
-				Serial.print("\t\"cur\": ");
+				Serial.print("\t\"current\": ");
 				Serial.print(constCurrStringLengthOf4(readA1));
 				Serial.println(",");
 				Serial.print("\t\"rpm\": ");
 				Serial.print(constRPMStringLengthOf7(readA2));
 				Serial.println(",");
-				//Serial.print("\t\"power\": ");
-				//Serial.print(constTimeStringLengthOf4(Power));
-				//Serial.println(",");
-				Serial.print("\t\"tim\": ");
+				Serial.print("\t\"power\": ");
+				Serial.print(constCurrStringLengthOf4(Power));
+				Serial.println(",");
+				Serial.print("\t\"timestamp\": ");
 				Serial.println(constTimeStringLengthOf10(currTime2));
 			Serial.println("}");
 			Serial.println("EOL");
