@@ -269,19 +269,19 @@ long enc_rpm()
 	
 	PORTD |=testpin;			//PD7 as trigger out set to HIGH
 	while(micros()-last_micros <=7000){
-		while(micros()-last_micros >=5000) // counts for 0,01 s measured timespan 0,0099975 s
+		while(micros()-last_micros >=5000) // counts for 0,005 s measured timespan  s
 		{
 
 			PORTD &= !testpin;			//PD7 as trigger out set to LOW
 			dir1=dir;
 			
 			 //smooths fluctuations in dirPin reading (not necessary anymore, problem solved via hardware)
-			if (dir1!=dir_before & stats<=5)
+			if (dir1!=dir_before & stats<=7)
 			{
 			stats++;
 			dir1=-1*dir1;
 			}
-			else if (dir1!=dir_before & stats>5)
+			else if (dir1!=dir_before & stats>7)
 			{
 			stats=0;
 			}
