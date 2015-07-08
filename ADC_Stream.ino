@@ -406,6 +406,7 @@ void loop()
 			delay(10);
 		}
 		msg = msg.substring(0,2);
+		msg.toUpperCase();
 		//serial.print("msg: ");
 		//serial.println(msg);
 	}
